@@ -9,7 +9,7 @@
 <ui:composition template="_template.xhtml">
 
 	<ui:define name="titulo">
-		Novo Autor
+		Alterar Autor
 	</ui:define>
 
 	<ui:define name="content">
@@ -25,27 +25,12 @@
 						<f:validateLength minimum="5" />
 					</h:inputText>
 					<h:message for="nome" />
-					<h:commandButton value="Gravar" action="#{autorBean.gravar}" />
+					<h:commandButton value="Gravar" action="#{autorBean.update}" />
 				</h:panelGrid>
 			</fieldset>
 		</h:form>
-		<h:form id="formTabelaDeAutores">
-			<h:dataTable id="tabelaAutores" value="#{autorBean.autores}"
-				var="autor">
-				<h:column>
-					<f:facet name="header">Nome</f:facet>
-					<h:outputText value="#{autor.nome}" />
-				</h:column>
-				<h:column>
-					<f:facet name="header">Alterar</f:facet>
-					<h:commandLink value="Alterar" action="#{autorBean.alterar(autor)}"/>
-				</h:column>
-				<h:column>
-					<f:facet name="header">Excluir</f:facet>
-					<h:commandLink value="Excluir" action="#{autorBean.remover(autor)}"/>
-				</h:column>
-			</h:dataTable>
-		</h:form>
 	</ui:define>
+
 </ui:composition>
+
 </html>

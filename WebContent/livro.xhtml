@@ -71,6 +71,11 @@
 					<h:column>
 						<h:outputText value="#{autor.nome}" />
 					</h:column>
+					
+					<h:column>
+						<f:facet name="header"></f:facet>
+						<h:commandLink value="Excluir" action="#{livroBean.removerAutorDoLivro(autor)}"/>		
+					</h:column>
 				</h:dataTable>
 			</fieldset>
 
