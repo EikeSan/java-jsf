@@ -17,3 +17,4 @@ local.properties
 *.class
 .vscode
 /build/
+/bin/
